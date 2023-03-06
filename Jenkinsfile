@@ -8,7 +8,7 @@ pipeline
         {
             steps 
             {
-                echo 'Build App'
+                sh 'mvn clean package'
             }
         }
 
@@ -16,7 +16,7 @@ pipeline
         {
             steps 
             {
-                echo 'Test App'
+               sh 'mvn test'
             }
         }
 
@@ -24,7 +24,7 @@ pipeline
         {
             steps 
             {
-                echo 'Deploy App'
+                sh 'mvn deploy'
             }
         }
     }
